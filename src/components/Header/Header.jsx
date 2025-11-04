@@ -171,7 +171,7 @@ const UserEmail = styled.span`
 `
 
 function Header() {
-  const { currentView, setCurrentView, currentWorkspace, nodes, nodeConversations } = useDecisionCanvasStore()
+  const { currentView, setCurrentView, currentWorkspace, nodes, edges, nodeConversations } = useDecisionCanvasStore()
   const [showCreateDialog, setShowCreateDialog] = useState(false)
   const [isGeneratingPDF, setIsGeneratingPDF] = useState(false)
 
@@ -372,8 +372,8 @@ function Header() {
       }
 
       // Calculate metrics
-      const nodeCount = nodes.length
-      const edgeCount = edges.length
+      const nodeCount = nodes?.length || 0
+      const edgeCount = edges?.length || 0
       const generatedDate = new Date().toLocaleDateString('en-US', { 
         year: 'numeric', 
         month: 'short', 
