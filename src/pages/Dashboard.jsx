@@ -268,7 +268,7 @@ function Dashboard() {
 
     try {
       setIsLoading(true)
-      const response = await fetch('http://localhost:8000/workspaces', {
+      const response = await fetch('http://54.79.147.183:8001/workspaces', {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -303,7 +303,7 @@ function Dashboard() {
     }
 
     try {
-      const response = await fetch('http://localhost:8000/workspaces', {
+      const response = await fetch('http://54.79.147.183:8001/workspaces', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -354,7 +354,7 @@ function Dashboard() {
     }
 
     try {
-      const response = await fetch(`http://localhost:8000/workspaces/${workspaceId}`, {
+      const response = await fetch(`http://54.79.147.183:8001/workspaces/${workspaceId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -394,7 +394,7 @@ function Dashboard() {
     }
 
     try {
-      const response = await fetch(`http://localhost:8000/workspaces/${workspace.id}`, {
+      const response = await fetch(`http://54.79.147.183:8001/workspaces/${workspace.id}`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`,

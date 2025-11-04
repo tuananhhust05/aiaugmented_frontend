@@ -257,7 +257,7 @@ function ChatInterface() {
     }
 
     try {
-      const response = await fetch(`http://localhost:8000/messages?node_id=${nodeId}`, {
+      const response = await fetch(`http://54.79.147.183:8001/messages?node_id=${nodeId}`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -410,7 +410,7 @@ function ChatInterface() {
 
     try {
       // 1. Send user message to API
-      const userMessageResponse = await fetch('http://localhost:8000/messages', {
+      const userMessageResponse = await fetch('http://54.79.147.183:8001/messages', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -473,7 +473,7 @@ function ChatInterface() {
       }
 
       // Call chat API to get AI response
-      const chatResponse = await fetch('http://localhost:8000/groq/chat', {
+      const chatResponse = await fetch('http://54.79.147.183:8001/groq/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -492,7 +492,7 @@ function ChatInterface() {
       const aiContent = chatData.response || chatData.message || chatData.content || `Response from ${nodeAgent}`
 
       // 3. Save AI response to API
-      const aiMessageResponse = await fetch('http://localhost:8000/messages', {
+      const aiMessageResponse = await fetch('http://54.79.147.183:8001/messages', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -534,7 +534,7 @@ function ChatInterface() {
         id: (Date.now() + 1).toString(),
         type: 'ai',
         agent: nodeAgent,
-        content: `Error: Unable to send message. Please check if the API server is running at http://localhost:8000. Error: ${error.message}`,
+        content: `Error: Unable to send message. Please check if the API server is running at http://54.79.147.183:8001. Error: ${error.message}`,
         timestamp: new Date(),
         addedToMap: false,
         error: true

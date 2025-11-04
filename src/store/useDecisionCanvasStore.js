@@ -99,7 +99,7 @@ export const useDecisionCanvasStore = create((set, get) => ({
 
     try {
       // Call API to delete node
-      const response = await fetch(`http://localhost:8000/nodes/${nodeId}`, {
+      const response = await fetch(`http://54.79.147.183:8001/nodes/${nodeId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,

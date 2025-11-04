@@ -315,7 +315,7 @@ function Register() {
     setIsLoading(true)
     
     try {
-      const response = await fetch('http://localhost:8000/auth/register', {
+      const response = await fetch('http://54.79.147.183:8001/auth/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

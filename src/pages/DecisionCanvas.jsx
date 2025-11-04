@@ -52,7 +52,7 @@ function DecisionCanvasPage() {
     }
 
     try {
-      const response = await fetch(`http://localhost:8000/nodes?workspace_id=${workspaceId}`, {
+      const response = await fetch(`http://54.79.147.183:8001/nodes?workspace_id=${workspaceId}`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -132,7 +132,7 @@ function DecisionCanvasPage() {
     }
 
     try {
-      const response = await fetch(`http://localhost:8000/workspaces/${id}`, {
+      const response = await fetch(`http://54.79.147.183:8001/workspaces/${id}`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,

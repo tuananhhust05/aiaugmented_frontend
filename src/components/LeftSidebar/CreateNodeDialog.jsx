@@ -39,7 +39,7 @@ function CreateNodeDialog({ onClose }) {
 
     try {
       // Call API to create node
-      const response = await fetch('http://localhost:8000/nodes', {
+      const response = await fetch('http://54.79.147.183:8001/nodes', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
