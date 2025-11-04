@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #0a0a0a;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Hide React Flow attribution/watermark */
+.react-flow__attribution {
+  display: none !important;
+}
+
+.react-flow__panel{
+    display: none !important;
+}
+
+a[href*="reactflow.dev"] {
+  display: none !important;
+}
+
+/* Remove extra whitespace from ReactFlow nodes */
+.react-flow__node {
+  padding: 0 !important;
+  margin: 0 !important;
+  background: transparent !important;
+}
+
+.react-flow__node-default {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
