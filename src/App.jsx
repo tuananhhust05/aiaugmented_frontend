@@ -5,6 +5,7 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import Dashboard from './pages/Dashboard'
 import DecisionCanvas from './pages/DecisionCanvas'
+import SummaryEditor from './pages/SummaryEditor'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Route path="/auth/register" element={<Register />} />
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/decision" element={<DecisionCanvas />} />
+      <Route path="/decision/summary-editor" element={<SummaryEditor />} />
     </Routes>
   )
 }

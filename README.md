@@ -59,7 +59,7 @@ npm run build
 
 ### Development
 
-The app will be available at `http://localhost:3000`
+The app will be available at `http://54.79.147.183:3000`
 
 ## Project Structure
 
